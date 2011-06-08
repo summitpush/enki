@@ -136,7 +136,7 @@ describe Comment, '.build_for_preview' do
   end
 
   it 'applies filter to body' do
-    @comment.body_html.should == 'A Comment'
+    @comment.body_html.should == "<p>A Comment</p>\n"
   end
 end
 
@@ -154,7 +154,7 @@ describe Comment, '.build_for_preview with OpenID author' do
   end
 
   it 'applies filter to body' do
-    @comment.body_html.should == 'A Comment'
+    @comment.body_html.should == "<p>A Comment</p>\n"
   end
 
   it 'sets author_url to OpenID identity' do
